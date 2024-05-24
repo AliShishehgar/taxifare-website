@@ -40,6 +40,7 @@ query= {"pickup_datetime":datetime_value, "pickup_longitude":float(pickup_lon), 
 url = 'https://taxifare.lewagon.ai/predict'
 response= requests.get(url=url, params=query).json()
 fare= response["fare"]
+st.markdown("### Predicts:")
 st.write(fare)
 
 # Add footer
